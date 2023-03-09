@@ -1,0 +1,143 @@
+@import "./src/global/vars";
+
+.container {
+  margin: 2rem auto;
+  max-width: 90vw;
+
+  @include respond-to("small") {
+    max-width: 94vw;
+    padding-bottom: 3rem;
+  }
+
+  @include respond-to("extralarge") {
+    max-width: 80vw;
+  }
+}
+
+.title {
+  color: $black;
+  font-size: 2.5rem;
+  font-family: $title;
+  text-align: center;
+  margin-bottom: 3rem;
+
+  @include respond-to("medium") {
+    font-size: 5rem;
+  }
+
+  span {
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      height: 4rem;
+      width: 130%;
+      left: -10%;
+      top: 0;
+      background-color: $yellow;
+      transform: skewX(19deg);
+
+      @include respond-to("medium") {
+        height: 8rem;
+      }
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      opacity: 1;
+      top: .8rem;
+      width: 2.5rem;
+      height: 2.5rem;
+      background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEMAAABDCAYAAADHyrhzAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA9ElEQVR4nO3bIQ7CMBxG8W4Kj0DO9t/NcDAsngTJBbgVlouABLkXsmQIKsbeL/lk0+RlmWtKlQzDsKu5nPM2LUTbl3hV3j0tRGuMkTGgKSUec+tLPKe+oG/Olsi39E8iYj8Vo+u6TVqbMMbIGGAMMAYYA4wBxgBjgDHAGGAMMAYYA4wBxgBjgDHAGGAMMAYYA4wBxgBjgDHAGGAMMAYYA4wBxgBjgDHAGGAMMAYYA4wBxgBjgDHAGGAMMAYYA4wBxgBjgDHAGGAMMAYYA4yxwhhNH3H6YtfpR775PHe2lHJIC9H6Fn5kDDDGxz/jUnlHXqj0W2+SnSN8uaO7iQAAAABJRU5ErkJggg==") no-repeat;
+      background-size: contain;
+      animation: blink-animation 1.5s steps(2, start) infinite;
+
+      @include respond-to("medium") {
+        top: 1.8rem;
+        width: 4.5rem;
+        height: 4.5rem;
+      }
+    }
+  }
+}
+
+.doodles {
+  position: fixed;
+  z-index: -10;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+
+  &Cat {
+    background: url("../../global/cat.png") no-repeat;
+    background-size: contain;
+    position: absolute;
+    right: -10%;
+    bottom: 5%;
+    transform: rotate(-30deg);
+    height: 33%;
+    width: 33%;
+  }
+
+  &Crown {
+    background: url("../../global/crown.png") no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: 0;
+    top: 7%;
+    transform: rotate(30deg);
+    height: 15%;
+    width: 15%;
+  }
+
+  &Swish {
+    background: url("../../global/swish.png") no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: 25%;
+    top: 40%;
+    height: 15%;
+    width: 15%;
+  }
+
+  &Frog {
+    background: url("../../global/frog.png") no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: 0;
+    bottom: -1%;
+    height: 25%;
+    width: 25%;
+  }
+
+  &Cloud {
+    background: url("../../global/cloud.png") no-repeat;
+    background-size: contain;
+    position: absolute;
+    right: 0;
+    top: 3%;
+    height: 25%;
+    width: 25%;
+  }
+
+  &Hearts {
+    background: url("../../global/hearts.png") no-repeat;
+    background-size: contain;
+    position: absolute;
+    right: 25%;
+    top: 60%;
+    height: 25%;
+    width: 25%;
+  }
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}

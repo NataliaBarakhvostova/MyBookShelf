@@ -1,0 +1,83 @@
+@import "./src/global/vars";
+
+.bookCard {
+  position: relative;
+  display: flex;
+  padding: 10px 10px 5px 0;
+  margin-bottom: 20px;
+  background-color: $white;
+  border-radius: 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+
+  @include respond-to('medium') {
+    padding: 10px 20px 5px 0;
+  }
+
+  &Content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    h3,
+    p {
+      margin: 5px 0 0;
+      font-family: $regular;
+      font-size: 1.1rem;
+    }
+
+    p {
+      font-size: 0.75rem;
+    }
+  }
+
+  &Footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: auto;
+    margin-bottom: 15px;
+  }
+
+  &Rating {
+    position: absolute;
+    top: 7px;
+    left: 100px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(100, 100, 111, 0.4) 0 7px 10px 0;
+    background-color: $white;
+    border-radius: 50%;
+
+    span {
+      font-size: .75rem;
+      font-weight: bold;
+      text-align: center;
+      color: $black;
+
+      span {
+        font-size: .5rem;
+      }
+    }
+  }
+
+  &Empty {
+    padding: 1rem 0 1rem 1rem;
+    border: 3px solid #000000;
+    background-color: $white;
+  }
+}
+
+.genresList {
+  display: flex;
+  gap: 5px;
+
+  &Item {
+    border-radius: 5px;
+    padding: 2px 5px;
+    font-size: 0.75rem;
+    color: $white;
+  }
+}

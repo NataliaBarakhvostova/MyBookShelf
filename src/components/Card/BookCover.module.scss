@@ -1,0 +1,15 @@
+@import "./src/global/vars";
+
+.bookCover {
+  position: relative;
+
+  h3 {
+    position: absolute;
+    left: 35px;
+    top: 10px;
+    max-width: 70px;
+    color: $white;
+    margin: 0;
+    text-align: center;
+  }
+}
