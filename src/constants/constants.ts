@@ -114,7 +114,7 @@ export const demoStages = [
       {
         id: 1678365443677,
         title: "Hunger Games",
-        author: "Susanne Collins",
+        author: "Susane Collins",
         genre: [{ name: "Dystopian", color: "#0500C7" }],
         size: "99750",
         rating: 0,
